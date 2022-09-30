@@ -1,6 +1,6 @@
 # Internet Restaurant page
 
-![Promo img](./img/promo.png)
+![Promo img](./img/../src/img/promo.png)
 
 ## Project for The Odin Project
 
