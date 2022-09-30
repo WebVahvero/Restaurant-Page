@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-text-color: black;
+    --light-text-color: white;
+    --header-footer-backgroundcolor: #046865;
+    --body-backgroundcolor: whitesmoke;
+    --main-section-backgroundcolor: whitesmoke;
+    --hover-color: #21A0A0;
+    --active-color: #011413;
+    --box-bg-color: #046865;
+
+    --box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: var(--dark-text-color);
+}
+
+body {
+    background-color: var(--body-backgroundcolor);
+}
+
+img {
+    height: 200px;
+    width: auto;
+}
+
+a {
+    color: var(--light-text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+.active {
+    color: var(--active-color);
+}
+
+body > div > section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+header, nav {
+    background-color: var(--header-footer-backgroundcolor);
+    padding: 0 10%;
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+    color: var(--light-text-color);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+        border: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text-color);
+        background-color: var(--header-footer-backgroundcolor);
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    button:hover {
+        color: var(--hover-color);
+    }
+}
+
+footer {
+    background-color: var(--header-footer-backgroundcolor);
+    padding: 0 5%;
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+    color: var(--light-text-color);
+}
+
+main {
+    grid-column-start: span 2;
+    background-color: var(--body-backgroundcolor);
+    padding: 20px 5%;
+    min-height: 90vh;
+}
+
+section.home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--main-section-backgroundcolor);
+    margin: 50px 0 100px 0;
+    
+    .welcome {
+        grid-column-start: span 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 80px 0;
+        background-color: var(--box-bg-color);
+        color: var(--light-text-color);
+        padding: 20px;
+        border-radius: 100px;
+        box-shadow: var(--box-shadow);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 100px 10px 100px 10px;
+        box-shadow: var(--box-shadow);
+    }
+
+    figcaption {
+        display: flex;
+        align-items: center;
+        padding-left: 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+section.menu {
+    margin: 50px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        background-color: var(--box-bg-color);
+        color: var(--light-text-color);
+        padding: 20px;
+        border-radius: 100px;
+        text-align: center;
+        margin: 0 0 80px 0;
+        box-shadow: var(--box-shadow);
+    }
+
+    .daily-deal {
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        background-color: var(--box-bg-color);
+        color: var(--light-text-color);
+        width: 60%;
+        align-self: center;
+        margin-bottom: 80px;
+        box-shadow: var(--box-shadow);
+
+        img {
+            border-radius: 10px 0 0 10px;
+            width: 40%;
+            height: auto;
+        }
+
+        .daily-deal-text {
+            padding-left: 100px;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        h4 {
+            margin-top: 20px;
+            background-color: red;
+            border-radius: 30px 10px 30px 10px;
+            padding: 15px 20px;
+        }
+
+        small {
+            opacity: 0;
+        }
+    }
+
+    .daily-deal:hover small {
+        opacity: 1;
+        transition: 400ms;
+    }
+
+    #starters, #burgers, #salads, #grills, #desserts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .menu-wrapper {
+        h3 {
+            margin: 100px 0 50px 0;
+            font-size: 2rem;
+        }
+    }
+
+    .menu-card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--box-bg-color);
+        color: var(--light-text-color);
+        width: 350px;
+        border-radius: 10px;
+        transition: 200ms;
+        box-shadow: var(--box-shadow);
+
+        img {
+            border-radius: 10px 10px 0 0;
+        }
+
+        small {
+            opacity: 0;
+        }
+        
+        .card-text {
+            padding: 20px;
+
+            h4, p {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .menu-card:hover small {
+        opacity: 1;
+        transition: 400ms;
+    }
+}
+
+section.contact {
+    margin: 50px 0 100px 0;
+
+    .title {
+        background-color: var(--box-bg-color);
+        color: var(--light-text-color);
+        padding: 20px;
+        border-radius: 100px;
+        text-align: center;
+        margin: 0 0 80px 0;
+        box-shadow: var(--box-shadow);
+    }
+
+    .contact-details {
+        margin: 50px 0;
+    }
+
+    iframe {
+        width: 50%;
+        height: 500px;
+    }
+}
