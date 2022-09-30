@@ -369,6 +369,10 @@ section.contact {
     header, nav {
         grid-column-start: span 2;
         justify-content: center;
+
+        button {
+            margin: 20px;
+        }
     }
 
     .menu-card {
