@@ -58,7 +58,7 @@ export default function view() {
     
     header.appendChild(h1);
 
-    main.appendChild(Contact());
+    main.appendChild(Home());
     view.appendChild(header);
     view.appendChild(nav);
     view.appendChild(main);

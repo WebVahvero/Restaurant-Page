@@ -261,3 +261,117 @@ section.contact {
         height: 500px;
     }
 }
+
+@media only screen and (max-width: 1770px) {
+    .daily-deal {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #starters, #burgers, #salads, #grills, #desserts {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;    
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    h1, .welcome {
+        text-align: center;
+    }
+
+    .daily-deal {
+        margin-bottom: 80px;
+
+        img {
+            width: 50%;
+        }
+
+        .daily-deal-text {
+            text-align: center;
+            
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+        }
+    }
+
+    #starters, #burgers, #salads, #grills, #desserts {
+        .menu-card {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    section.home {
+
+        figure, figcaption {
+            grid-column-start: span 2;
+        }
+
+        figcaption {
+            padding: 0;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    .daily-deal {
+        flex-direction: column;
+        margin-bottom: 50px;
+
+        img {
+            width: 100% !important;
+        }
+
+        .daily-deal-text {
+            padding-left: 0 !important;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    .contact-details {
+        margin: 50px 0;
+        text-align: center;
+    }
+
+    iframe {
+        width: 100% !important;
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #starters, #burgers, #salads, #grills, #desserts {
+        grid-template-columns: repeat(1, 1fr) !important;
+
+        .menu-card {
+            width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header, nav {
+        grid-column-start: span 2;
+        justify-content: center;
+    }
+
+    .menu-card {
+        width: 100%;
+    }
+}
